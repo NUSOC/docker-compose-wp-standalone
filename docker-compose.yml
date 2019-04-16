@@ -29,6 +29,7 @@ services:
       WORDPRESS_DEBUG: 1
     volumes:
       - ./WEB:/var/www/html
+      - ./supporting:/scripts
     networks:
       - default
       - traefik_default
