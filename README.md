@@ -38,5 +38,5 @@ Execute commands via `docker-compose exec`
 ```
 # dc exec wordpress wp --allow-root core update
 # dc exec wordpress wp --allow-root plugin install wordfence --activate
-
+# dc exec wordpress wp --allow-root plugin install all-in-one-wp-migration --activate
 ```
