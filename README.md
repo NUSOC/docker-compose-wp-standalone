@@ -27,4 +27,16 @@ wp core install --allow-root --url=https://domain.to.use/ --title=TEST --admin_u
 
 Additional
 -
-In the container, see the `/scripts` folder for to install wp-cli
+In the container, see the `/scripts` folder for to install wp-cli. I've set up `dc` as an alias to docker-compose on the host system. 
+
+Execute commands via `docker-compose exec`
+```
+# dc exec wordpress wp --allow-root core version
+5.2
+```
+
+```
+# dc exec wordpress wp --allow-root core update
+# dc exec wordpress wp --allow-root plugin install wordfence --activate
+
+```
