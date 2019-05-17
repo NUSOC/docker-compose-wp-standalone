@@ -1,5 +1,10 @@
 
-
+Clone
+-
+```
+git clone ___ folder-name
+cd folder-name
+```
 
 Set up 
 -
@@ -14,28 +19,16 @@ URL=<<URL>>
 Launch:
 -
 ```
-git clone ___ folder-name
-cd folder-name
 docker-composer up -d
-```
-
-In Container
--
-```
-wp core install --allow-root --url=https://domain.to.use/ --title=TEST --admin_user=root --admin_email=no@example.com  
 ```
 
 Additional
 -
-In the container, see the `/scripts` folder for to install wp-cli. I've set up `dc` as an alias to docker-compose on the host system. 
-
-Execute commands via `docker-compose exec`
-```
-# dc exec wordpress wp --allow-root core version
-5.2
-```
+In the container, see the `/scripts` folder for to install wp-cli. (I've set up `dc` as an alias to docker-compose on the host system. )
 
 ```
+# dc exec wordpress sh /scripts/install.wpcli.sh
+# dc exec wordpress core install --allow-root --url=https://domain.to.use/ --title=TEST --admin_user=root --admin_email=no@example.com
 # dc exec wordpress wp --allow-root core update
 # dc exec wordpress wp --allow-root plugin install wordfence --activate
 # dc exec wordpress wp --allow-root plugin install all-in-one-wp-migration --activate
