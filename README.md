@@ -19,6 +19,7 @@ URL=<<URL>>
 Launch:
 -
 ```
+mv docker-compose-TYPE.yml docker-compose.yml
 docker-composer up -d
 ```
 
