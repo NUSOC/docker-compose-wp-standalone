@@ -32,7 +32,7 @@ services:
       - ./supporting:/scripts
     networks:
       - default
-      - traefik_default
+      - proxy
     labels:
       - traefik.enable=true
       - traefik.backend=$LABEL
@@ -42,5 +42,5 @@ services:
 networks:
   default:
     internal: true
-  traefik_default:
+  proxy:
     external: true
