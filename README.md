@@ -29,7 +29,7 @@ In the container, see the `/scripts` folder for to install wp-cli.
 
 ```
 docker-compose exec wordpress sh /scripts/install.wpcli.sh
-docker-compose exec wordpress wp core install --allow-root --url=https://domain.to.use/ --title=TEST --admin_user=root --admin_email=no@example.com
+docker-compose exec wordpress wp core install --allow-root --title=TEST --admin_user=root --admin_email=no@example.com --url=https://domain.to.use/
 docker-compose exec wordpress wp --allow-root core update
 docker-compose exec wordpress wp --allow-root plugin install wordfence --activate
 docker-compose exec wordpress wp --allow-root plugin install all-in-one-wp-migration --activate
