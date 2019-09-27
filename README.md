@@ -25,12 +25,12 @@ docker-composer up -d
 
 Additional
 -
-In the container, see the `/scripts` folder for to install wp-cli. (I've set up `dc` as an alias to docker-compose on the host system. )
+In the container, see the `/scripts` folder for to install wp-cli. 
 
 ```
-# dc exec wordpress sh /scripts/install.wpcli.sh
-# dc exec wordpress core install --allow-root --url=https://domain.to.use/ --title=TEST --admin_user=root --admin_email=no@example.com
-# dc exec wordpress wp --allow-root core update
-# dc exec wordpress wp --allow-root plugin install wordfence --activate
-# dc exec wordpress wp --allow-root plugin install all-in-one-wp-migration --activate
+docker-compose exec wordpress sh /scripts/install.wpcli.sh
+docker-compose exec wordpress wp core install --allow-root --url=https://domain.to.use/ --title=TEST --admin_user=root --admin_email=no@example.com
+docker-compose exec wordpress wp --allow-root core update
+docker-compose exec wordpress wp --allow-root plugin install wordfence --activate
+docker-compose exec wordpress wp --allow-root plugin install all-in-one-wp-migration --activate
 ```
