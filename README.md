@@ -33,4 +33,11 @@ docker-compose exec wordpress wp core install --allow-root --title=TEST --admin_
 docker-compose exec wordpress wp --allow-root core update
 docker-compose exec wordpress wp --allow-root plugin install wordfence --activate
 docker-compose exec wordpress wp --allow-root plugin install all-in-one-wp-migration --activate
+docker-compose exec wordpress wp --allow-root plugin install /scripts/all-in-one-wp-migration-unlimited-extension.zip --activate
+```
+
+fix permissions
+```
+docker-compose exec wordpress chgrp www-data -R .
+docker-compose exec wordpress chmod g+wr -R .
 ```
