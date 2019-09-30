@@ -1,0 +1,7 @@
+DB/
+WEB/
+themes/
+*.wpress
+*.zip
+.env
+docker-compose.yml
