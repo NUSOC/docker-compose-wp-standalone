@@ -41,3 +41,7 @@ fix permissions
 docker-compose exec wordpress chgrp www-data -R .
 docker-compose exec wordpress chmod g+wr -R .
 ```
+Multisite
+```
+docker-compose exec wordpress wp  --allow-root core multisite-convert
+```
