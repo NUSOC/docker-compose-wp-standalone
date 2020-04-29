@@ -1,5 +1,5 @@
 
-alias wp='alias --allow-root '
+alias wp='wp --allow-root '
 alias ll='ls -lah '
 
 
