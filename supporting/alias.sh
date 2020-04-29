@@ -6,5 +6,5 @@ alias ll='ls -lah '
 function upsie {
   apt update -y
   apt install vim less git -y
-  sh /scripts/install.wp.cli.sh
+  sh /scripts/install.wpcli.sh
 }
