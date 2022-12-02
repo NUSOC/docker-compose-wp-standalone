@@ -39,6 +39,15 @@ services:
       - traefik.docker.network=proxy
       - traefik.frontend.rule=Host:$URL
 
+  wordpress-cli:
+    depends_on:
+      - db
+      - wordpress
+    image: wordpress:cli
+    user: xfs
+    volumes:
+      - ./WEB:/var/www/html
+
 networks:
   default:
     internal: true
